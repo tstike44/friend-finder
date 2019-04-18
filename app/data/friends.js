@@ -1,4 +1,4 @@
-var users = [
+var friendsArr = [
     {
         name: "Liz B",
         photo: "https://vignette.wikia.nocookie.net/a-tv-challenge/images/f/ff/Liz_B.jpg/revision/latest?cb=20190131112852",
@@ -67,3 +67,5 @@ var users = [
     },
 
 ]
+
+module.exports = friendsArr;

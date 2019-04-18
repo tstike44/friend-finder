@@ -1,23 +1,20 @@
-//declare needed packages
+
 var express = require("express");
-var path = require("path");
 
 var app = express();
+
+// port setting that can be uploaded to heroku
 var PORT = process.env.PORT || 8080;
 
+// Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "app/public/home.html"));
-  });
+//connecting to my routes folder
+require("./routing/apiRoutes")(app);
+require("./routing/htmlRoutes")(app);
+// LISTENER
 
-  app.get("/survey", function (req, res) {
-    res.sendFile(path.join(__dirname, "app/public/survey.html"));
-  });
-
-  app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
-  });
-
-  
+app.listen(PORT, function () {
+  console.log("App listening on PORT: " + PORT);
+});
