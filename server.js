@@ -1,3 +1,8 @@
+//left to do 
+
+//survey needs to push data to the array
+//array needs to compare to the other arrays
+//get match from looping through the array differences
 
 var express = require("express");
 

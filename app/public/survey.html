@@ -21,11 +21,12 @@
         <br>
         <h6>Link to Photo (required)</h6>
         <input type="text" id="photo" class="form-control" required="">
+
         <br>
         <h4 class="quest-num font-weight-bold">Question 1</h4>
         <h6 class="question">Summer is the best season.</h6>
 
-        <select class="select select mb-3">
+        <select class="select-1 select mb-3">
             <option selected>Select an Option</option>
             <option value="1">1 (this ain't it)</option>
             <option value="2">2</option>
@@ -38,7 +39,7 @@
         <br>
         <h4 class="quest-num font-weight-bold">Question 2</h4>
         <h6 class="question">Ghosts are real</h6>
-        <select class="select select mb-3">
+        <select class=" select-2 select mb-3">
             <option selected>Select an Option</option>
             <option value="1">1 (this ain't it)</option>
             <option value="2">2</option>
@@ -51,7 +52,7 @@
         <br>
         <h4 class="quest-num font-weight-bold">Question 3</h4>
         <h6 class="question">Would you lick a penny for a dollar?</h6>
-        <select class="select select mb-3">
+        <select class="select-3 select mb-3">
             <option selected>Select an Option</option>
             <option value="1">1 (this ain't it)</option>
             <option value="2">2</option>
@@ -64,7 +65,7 @@
         <br>
         <h4 class="quest-num font-weight-bold">Question 4</h4>
         <h6 class="question">Anime > Cartoons</h6>
-        <select class="select select mb-3">
+        <select class="select-4 select mb-3">
             <option selected>Select an Option</option>
             <option value="1">1 (this ain't it)</option>
             <option value="2">2</option>
@@ -77,7 +78,7 @@
         <br>
         <h4 class="quest-num font-weight-bold">Question 5</h4>
         <h6 class="question"> Is mayonnaise an instrument?</h6>
-        <select class="select select mb-3">
+        <select class="select-5 select mb-3">
             <option selected>Select an Option</option>
             <option value="1">1 (this ain't it)</option>
             <option value="2">2</option>
@@ -90,7 +91,7 @@
         <br>
         <h4 class="quest-num font-weight-bold">Question 6</h4>
         <h6 class="question">indoors > outdoors</h6>
-        <select class="select select mb-3">
+        <select class="select-6 select mb-3">
             <option selected>Select an Option</option>
             <option value="1">1 (this ain't it)</option>
             <option value="2">2</option>
@@ -103,7 +104,7 @@
         <br>
         <h4 class="quest-num font-weight-bold">Question 7</h4>
         <h6 class="question">Winter is the best season</h6>
-        <select class="select select mb-3">
+        <select class="select-7 select mb-3">
             <option selected>Select an Option</option>
             <option value="1">1 (this ain't it)</option>
             <option value="2">2</option>
@@ -116,7 +117,7 @@
         <br>
         <h4 class="quest-num font-weight-bold">Question 8</h4>
         <h6 class="question">Abigail should have been executed instead</h6>
-        <select class="select select mb-3">
+        <select class="select-8 select mb-3">
             <option selected>Select an Option</option>
             <option value="1">1 (this ain't it)</option>
             <option value="2">2</option>
@@ -129,7 +130,7 @@
         <br>
         <h4 class="quest-num font-weight-bold">Question 9</h4>
         <h6 class="question">3 Doors Down is the best band</h6>
-        <select class="select select mb-3">
+        <select class="select-9 select mb-3">
             <option selected>Select an Option</option>
             <option value="1">1 (this ain't it)</option>
             <option value="2">2</option>
@@ -142,7 +143,7 @@
         <br>
         <h4 class="quest-num font-weight-bold">Question 10</h4>
         <h6 class="question">Teen Titans are stronger than Justice League</h6>
-        <select class="select select mb-3">
+        <select class="select-10 select mb-3">
             <option selected>Select an Option</option>
             <option value="1">1 (this ain't it)</option>
             <option value="2">2</option>
@@ -153,9 +154,63 @@
 
         <br>
         <br>
-        <button type="button" class="btn btn-primary btn btn-block">Submit</button>
+        <button type="button" class="btn btn-primary btn btn-block submit">Submit</button>
         <br>
     </div>
+
+
+    <script type="text/javascript">
+
+        $(".submit").on("click", function (event) {
+            event.preventDefault();
+
+            //setting array for our results to be stored
+            var newFriend = {
+                name: $("")
+                questionOne: $(".select-1").val().trim(),
+                questionTwo: $(".select-2").val().trim(),
+                questionThree: $(".select-3").val().trim(),
+                questionFour: $(".select-4").val().trim(),
+                questionFive: $(".select-5").val().trim(),
+                questionSix: $(".select-6").val().trim(),
+                questionSeven: $(".select-7").val().trim(),
+                questionEight: $(".select-8").val().trim(),
+                questionNine: $(".select-9").val().trim(),
+                questionTen: $(".select-10").val().trim(),
+            };
+            console.log(newFriend);
+
+
+            $.post("/api/friends", newFriend,
+                function (data) {
+
+                    // If a table is available... tell user they are booked.
+                    if (data) {
+                        console.log("New Friend added")
+                    }
+
+                    // If a table is available... tell user they on the waiting list.
+                    else {
+                        alert("Sorry no new friends");
+                    }
+
+                    // Clear the form when submitting
+                        $(".select-1").val(""),
+                        $(".select-2").val(""),
+                        $(".select-3").val(""),
+                        $(".select-4").val(""),
+                        $(".select-5").val(""),
+                        $(".select-6").val(""),
+                        $(".select-7").val(""),
+                        $(".select-8").val(""),
+                        $(".select-9").val(""),
+                        $(".select-10").val("")
+
+                });
+
+        })
+
+    </script>
 
 
 
