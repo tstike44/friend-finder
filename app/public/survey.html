@@ -1,227 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Friend Survey</title>
+	<title>Friend Finder</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Baloo|Roboto" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <h1 class="page-title">Survey Questions</h1>
-        <hr>
-        <h2 class="header">About You</h2>
-        <br>
-        <h6>Name (required)</h6>
-        <input type="text" id="name" class="form-control" required="">
-        <br>
-        <h6>Link to Photo (required)</h6>
-        <input type="text" id="photo" class="form-control" required="">
+	<div class="container content">
+		<h1>Survey</h1>
+		<p>Take a quick survey to find your perfect match! These questions are answered by the numbers 1 through 5. If
+			you really, really disagree with the statement, your answer would be 1. If you find a statement to hit
+			extremely close to home, put in a 5.</p>
+		<form>
+			<div class="form-group">
+				<input id="name" type="text" class="form-control" placeholder="Name (Required)">
+			</div>
+			<div class="form-group">
+				<input id="photo" type="text" class="form-control" placeholder="Link to Profile Photo (Required)">
+			</div>
+			<div class="form-group">
+				<label for="question1">I like to do janitorial work.</label>
+				<select class="form-control" id="question1">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question2">I have some bird-like features (or so I've been told).</label>
+				<select class="form-control" id="question2">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question3">I think very highly of myself.</label>
+				<select class="form-control" id="question3">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question4">I enjoy martial arts.</label>
+				<select class="form-control" id="question4">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question5">I read as a hobby.</label>
+				<select class="form-control" id="question5">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question6">I am God's gift to the opposite sex.</label>
+				<select class="form-control" id="question6">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question7">I don't so well with the opposite sex.</label>
+				<select class="form-control" id="question7">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question8">I am good with money.</label>
+				<select class="form-control" id="question8">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question9">I work out at the gym often.</label>
+				<select class="form-control" id="question9">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question10">I consider myself aggressive.</label>
+				<select class="form-control" id="question10">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+		</form>
+		<div class="text-center">
+			<button id="submitBtn" type="submit" class="btn btn-success btn-lg">Submit</button>
+		</div>
 
-        <br>
-        <h4 class="quest-num font-weight-bold">Question 1</h4>
-        <h6 class="question">Summer is the best season.</h6>
+		<!-- Modal after survey completion -->
+		<div id="bestFriendModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h3 class="modal-title">Your New Best Friend</h1>
+					</div>
+					<div class="modal-body">
+						<h2 id="bestFriend"></h2>
+						<img id="bestFriendPhoto" src="#">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-        <select class="select-1 select mb-3">
-            <option selected>Select an Option</option>
-            <option value="1">1 (this ain't it)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (ahhhh yeeeeahhh boiiii</option>
-        </select>
-
-
-        <br>
-        <h4 class="quest-num font-weight-bold">Question 2</h4>
-        <h6 class="question">Ghosts are real</h6>
-        <select class=" select-2 select mb-3">
-            <option selected>Select an Option</option>
-            <option value="1">1 (this ain't it)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (ahhhh yeeeeahhh boiiii</option>
-        </select>
-
-
-        <br>
-        <h4 class="quest-num font-weight-bold">Question 3</h4>
-        <h6 class="question">Would you lick a penny for a dollar?</h6>
-        <select class="select-3 select mb-3">
-            <option selected>Select an Option</option>
-            <option value="1">1 (this ain't it)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (ahhhh yeeeeahhh boiiii</option>
-        </select>
-
-
-        <br>
-        <h4 class="quest-num font-weight-bold">Question 4</h4>
-        <h6 class="question">Anime > Cartoons</h6>
-        <select class="select-4 select mb-3">
-            <option selected>Select an Option</option>
-            <option value="1">1 (this ain't it)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (ahhhh yeeeeahhh boiiii</option>
-        </select>
-
-
-        <br>
-        <h4 class="quest-num font-weight-bold">Question 5</h4>
-        <h6 class="question"> Is mayonnaise an instrument?</h6>
-        <select class="select-5 select mb-3">
-            <option selected>Select an Option</option>
-            <option value="1">1 (this ain't it)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (ahhhh yeeeeahhh boiiii</option>
-        </select>
-
-
-        <br>
-        <h4 class="quest-num font-weight-bold">Question 6</h4>
-        <h6 class="question">indoors > outdoors</h6>
-        <select class="select-6 select mb-3">
-            <option selected>Select an Option</option>
-            <option value="1">1 (this ain't it)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (ahhhh yeeeeahhh boiiii</option>
-        </select>
-
-
-        <br>
-        <h4 class="quest-num font-weight-bold">Question 7</h4>
-        <h6 class="question">Winter is the best season</h6>
-        <select class="select-7 select mb-3">
-            <option selected>Select an Option</option>
-            <option value="1">1 (this ain't it)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (ahhhh yeeeeahhh boiiii</option>
-        </select>
-
-
-        <br>
-        <h4 class="quest-num font-weight-bold">Question 8</h4>
-        <h6 class="question">Abigail should have been executed instead</h6>
-        <select class="select-8 select mb-3">
-            <option selected>Select an Option</option>
-            <option value="1">1 (this ain't it)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (ahhhh yeeeeahhh boiiii</option>
-        </select>
-
-
-        <br>
-        <h4 class="quest-num font-weight-bold">Question 9</h4>
-        <h6 class="question">3 Doors Down is the best band</h6>
-        <select class="select-9 select mb-3">
-            <option selected>Select an Option</option>
-            <option value="1">1 (this ain't it)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (ahhhh yeeeeahhh boiiii</option>
-        </select>
-
-
-        <br>
-        <h4 class="quest-num font-weight-bold">Question 10</h4>
-        <h6 class="question">Teen Titans are stronger than Justice League</h6>
-        <select class="select-10 select mb-3">
-            <option selected>Select an Option</option>
-            <option value="1">1 (this ain't it)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (ahhhh yeeeeahhh boiiii</option>
-        </select>
-
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary btn btn-block submit">Submit</button>
-        <br>
-    </div>
-
-
-    <script type="text/javascript">
-
-        $(".submit").on("click", function (event) {
-            event.preventDefault();
-
-            //setting array for our results to be stored
-            var newFriend = {
-                name: $("")
-                questionOne: $(".select-1").val().trim(),
-                questionTwo: $(".select-2").val().trim(),
-                questionThree: $(".select-3").val().trim(),
-                questionFour: $(".select-4").val().trim(),
-                questionFive: $(".select-5").val().trim(),
-                questionSix: $(".select-6").val().trim(),
-                questionSeven: $(".select-7").val().trim(),
-                questionEight: $(".select-8").val().trim(),
-                questionNine: $(".select-9").val().trim(),
-                questionTen: $(".select-10").val().trim(),
-            };
-            console.log(newFriend);
-
-
-            $.post("/api/friends", newFriend,
-                function (data) {
-
-                    // If a table is available... tell user they are booked.
-                    if (data) {
-                        console.log("New Friend added")
-                    }
-
-                    // If a table is available... tell user they on the waiting list.
-                    else {
-                        alert("Sorry no new friends");
-                    }
-
-                    // Clear the form when submitting
-                        $(".select-1").val(""),
-                        $(".select-2").val(""),
-                        $(".select-3").val(""),
-                        $(".select-4").val(""),
-                        $(".select-5").val(""),
-                        $(".select-6").val(""),
-                        $(".select-7").val(""),
-                        $(".select-8").val(""),
-                        $(".select-9").val(""),
-                        $(".select-10").val("")
-
-                });
-
-        })
-
-    </script>
-
-
-
-    <script src="http://code.jquery.com/jquery-3.4.0.min.js"
-        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+	<footer>
+		<div class="container">
+			<a href="/api/friends">Discover Friends in Philly API</a>
+			<span>|</span>
+			<a href="https://github.com/yoonslee/FriendFinder">GitHub Repo</a>
+		</div>
+	</footer>
+	<script src="http://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>
+
+<script type="text/javascript">
+	$("#submitBtn").on("click", function (event) {
+		event.preventDefault();
+		// Form validation
+		var valid = true;
+		if ($("#name").val() === "" || $("#photo").val() === "") {
+			valid = false;
+		} else if ($("#question1").val() === "empty" || $("#question2").val() === "empty" || $("#question3").val() === "empty" || $("#question4").val() === "empty" || $("#question5").val() === "empty" || $("#question6").val() === "empty" || $("#question7").val() === "empty" || $("#question8").val() === "empty" || $("#question9").val() === "empty" || $("#question10").val() === "empty") {
+			valid = false;
+		}
+		if (valid === true) {
+			var newUser = {
+				name: $("#name").val().trim(),
+				photo: $("#photo").val().trim(),
+				scores: [
+					$("#question1").val(),
+					$("#question2").val(),
+					$("#question3").val(),
+					$("#question4").val(),
+					$("#question5").val(),
+					$("#question6").val(),
+					$("#question7").val(),
+					$("#question8").val(),
+					$("#question9").val(),
+					$("#question10").val()
+				]
+			};
+			var currentURL = window.location.origin;
+			// Ajax call for receiving response after POST req
+			$.post(currentURL + "/api/friends", newUser, function (data) {
+				$("#bestFriend").text(data.name);
+				$("#bestFriendPhoto").attr("src", data.photo);
+				$("#bestFriendModal").modal("toggle");
+			});
+		} else {
+			// If a required field is missing, show alert
+			alert("Survey is incomplete!");
+		}
+	});
+</script>

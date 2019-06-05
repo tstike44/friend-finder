@@ -15,6 +15,9 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//delivering static CSS
+app.use(express.static(__dirname + "/app/css"));
+
 //connecting to my routes folder
 require("./app/routes/apiRoutes")(app);
 require("./app/routes/htmlRoutes")(app);
