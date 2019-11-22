@@ -15,8 +15,8 @@ app.use(express.static(__dirname + "/app/css"));
 //connecting to my routes folder
 require("./app/routes/apiRoutes")(app);
 require("./app/routes/htmlRoutes")(app);
-// LISTENER
 
+// LISTENER
 app.listen(PORT, function () {
   console.log("App listening on PORT: " + PORT);
 });

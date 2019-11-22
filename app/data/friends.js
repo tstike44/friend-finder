@@ -1,3 +1,4 @@
+//object containing the starter friends
 var friendsArr = [
     {
         name: "Liz B",

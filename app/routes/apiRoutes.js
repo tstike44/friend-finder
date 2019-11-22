@@ -16,6 +16,7 @@ module.exports = function(app) {
     var bestFriendIndex = 0;
     var minimumDifference = 40;
 
+    //looping through friends to find the best match
     for(var i = 0; i < friends.length; i++) {
       var totalDifference = 0;
       for(var j = 0; j < friends[i].scores.length; j++) {
